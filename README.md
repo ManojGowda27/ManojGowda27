@@ -82,24 +82,44 @@ I choose tools based on the problem at hand—reliability for finance, throughpu
 
 *A showcase of not just "what" I built, but "why" I built it that way.*
 
-### 1. Reddit Data Lakehouse Pipeline
-**The Problem:** I needed to handle high-volume data ingestion without crashing worker nodes due to memory constraints.
-**The Evolution:**
-* *Iteration 1:* Basic list-based loading (O(N) memory complexity) which caused OOM failures.
-* *Iteration 2:* Refactored to **Python Generators** (lazy evaluation), reducing memory complexity to **O(1)**.
-* *Architecture:* Implemented an atomic extract-load pattern on **Apache Airflow** to resolve distributed race conditions across nodes.
-* *Outcome:* A stable Star Schema in **Redshift** with automated schema inference via **AWS Glue**.
+## Featured Projects
 
-[![View Repo](https://img.shields.io/badge/View_Repo-181717?style=flat-square&logo=github)](https://github.com/ManojGowda27/reddit-aws-lakehouse)
+<table>
+<tr>
+  
+<td width="50%">
+  
+  ### 1. Reddit Data Lakehouse Pipeline
+  **The Problem:** I needed to handle high-volume data ingestion without crashing worker nodes due to memory constraints.
+  
+  **The Evolution:**
+  * *Iteration 1:* Basic list-based loading (O(N) memory complexity) which caused OOM failures.
+  * *Iteration 2:* Refactored to **Python Generators** (lazy evaluation), reducing memory complexity to **O(1)**.
+  * *Architecture:* Implemented an atomic extract-load pattern on **Apache Airflow** to resolve distributed race conditions across nodes.
+    
+  **Outcome:** A stable Star Schema in **Redshift** with automated schema inference via **AWS Glue**.
+  
+  [![View Repo](https://img.shields.io/badge/View_Repo-181717?style=flat-square&logo=github)](https://github.com/ManojGowda27/reddit-aws-lakehouse)
+  
+</td>
+<td width="50%">
+  
+  ### 2. Realtime Data Streaming Architecture
+  **The Problem:** The legacy TCP prototype lacked backpressure handling, meaning any consumer downtime or network lag resulted in permanent data loss.
+  
+  **The Evolution:**
+  * **Resilience:** Replaced legacy TCP with **Apache Kafka** & **Spark Structured Streaming** to guarantee zero data loss and replayability.
+  * **Intelligence:** Integrated **OpenAI GPT-3.5** for real-time sentiment analysis, implementing selective filtering to minimize API costs.
+  * **Infrastructure:** Deployed a fully containerized microservices ecosystem (Zookeeper, Kafka, Spark) using **Docker Compose**.
 
-### 2. Realtime Data Streaming Architecture
-**The Problem:** Legacy TCP prototypes were prone to data loss during consumer downtime.
-**The Solution:**
-* Migrated to **Apache Kafka** & **Spark Structured Streaming** to ensure zero data loss and replayability.
-* Integrated **OpenAI GPT-3.5** for real-time sentiment analysis, but added selective filtering strategies to manage API costs and latency.
-* Fully containerized using **Docker Compose** for a reproducible microservices ecosystem.
+**Outcome:** A fault-tolerant, real-time pipeline capable of high-throughput ingestion, stream processing, and indexed search.
+  
+  [![View Repo](https://img.shields.io/badge/View_Repo-181717?style=flat-square&logo=github)](https://github.com/ManojGowda27/Realtime_Data_Streaming)
+  
+</td>
 
-[![View Repo](https://img.shields.io/badge/View_Repo-181717?style=flat-square&logo=github)](https://github.com/ManojGowda27/Realtime_Data_Streaming)
+</tr>
+</table>
 
 
 <p align="center">
