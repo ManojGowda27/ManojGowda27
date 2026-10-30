@@ -41,7 +41,7 @@ Unlike standard data dumps, I focus on the *reliability* of the ecosystem. Wheth
 
 | Role | Impact |
 |------|--------|
-| **Billing Data Analyst @ Lob** (Currently Working) | Reduced report generation time by **30%** by unifying pricing/tracking data into trusted dbt models. Automated validation tests to ensure strict financial governance. |
+| **Analytics Engineer @ Lob** (Currently Working) | Reduced report generation time by **30%** by unifying pricing/tracking data into trusted dbt models. Automated validation tests to ensure strict financial governance. |
 | **Data Analyst @ ElevateMe** | Engineered statistical models for customer segmentation and built real-time ETL pipelines using Python and Spark. |
 | **Data Analyst @ InfoTrack** | Optimized SQL queries for extraction, boosting supply chain efficiency by **15%**. |
 
